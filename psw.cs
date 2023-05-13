@@ -11,6 +11,10 @@ class Player {
     public Player(String name) {
         this.name = name;
         this.health = 100;
+        this.weapons = new ArrayList<>();
+        this.weapons.add(pistol);
+        this.weapons.add(shotgun);
+        this.weapons.add(sniperRifle);
         this.ships = new ArrayList<>();
         this.planes = new ArrayList<>();
     }
