@@ -38,6 +38,82 @@
         </section>
     </main>
 <a href="https://openai.com/">Credits to  OpenAI's Chat GPT</a>
+    <form id="loginForm">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username">
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password">
+  <br>
+  <input type="submit" value="Login">
+</form>
+
+    <script>
+  // Retrieve the login form element
+  const loginForm = document.getElementById('loginForm');
+
+  // Add an event listener to the form submit event
+  loginForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Get the entered username and password
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Store the username and password in local storage
+    localStorage.setItem('username', username);
+    localStorage.setItem('password', password);
+
+    // Redirect the user to the authenticated page or perform any other desired action
+    window.location.href = 'authenticated.html';
+  });
+</script>
+
+    <script>
+  // Check if the user is authenticated by retrieving the stored credentials
+  const storedUsername = localStorage.getItem('username');
+  const storedPassword = localStorage.getItem('password');
+
+  if (storedUsername && storedPassword) {
+    // The user is authenticated, perform any desired actions
+    console.log('User is authenticated');
+  } else {
+    // Redirect the user back to the login page or display an error message
+    window.location.href = 'login.html';
+  }
+</script>
+
+    <form id="registrationForm">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username">
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password">
+  <br>
+  <input type="submit" value="Register">
+</form>
+
+    <script>
+  // Retrieve the registration form element
+  const registrationForm = document.getElementById('registrationForm');
+
+  // Add an event listener to the form submit event
+  registrationForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Get the entered username and password
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Store the username and password in local storage
+    localStorage.setItem('username', username);
+    localStorage.setItem('password', password);
+
+    // Redirect the user to the authenticated page or perform any other desired action
+    window.location.href = 'authenticated.html';
+  });
+</script>
+
     <footer>
         <p>&copy; 2023 AR-DEV-1. All rights reserved.</p>
     </footer>
