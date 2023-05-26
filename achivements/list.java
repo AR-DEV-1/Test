@@ -7,6 +7,4 @@ public class Player {
         achievement.setUnlocked(true);
         achievements.add(achievement);
     }
-
-    // Other methods and logic for your player class
 }
