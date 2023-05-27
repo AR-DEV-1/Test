@@ -9,7 +9,10 @@
 
 body {
   background-image: url('jet-gb66c0f9d7_1280.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 
 
 a {
