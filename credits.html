@@ -4,20 +4,25 @@
   <title>Credits</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
-    /* Keyframes for fade-in animation */
-    @keyframes fade-in {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    /* Define the animation */
+    @keyframes moveDown {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(100%);
+      }
     }
 
-    /* Apply the animation to the list */
-    ul {
-      animation: fade-in 5s ease-in-out;
+    /* Apply the animation to the element */
+    .animated-credits {
+      animation: moveDown 15s linear infinite;
     }
   </style>
 </head>
 <body>
   <h1>Credits</h1>
+  <div class="animated-credits">
   <p>Thank you for playing our game!</p>
   <h2>Development Team</h2>
   <ul>
@@ -27,12 +32,17 @@
     <li>ChatGPT - Programmer</li>
     <li>X - Music</li>
     <li>Github - For hosting</li>
+    <li>Bing A.I- Suggestions</li>
+    <li>AShamaluevMusic- For the music heroes</li>
+    <li>Soundcloud- For music </li>
+    <li>---------------------------------------</li>
   </ul>
   <h2>Special Thanks</h2>
   <ul>
     <li>Friends and Family</li>
     <li>Community Contributors</li>
     <li>Open-Source Libraries</li>
+    <li>----------------------------------------</li>
     
     <a href="index.html">Home Page</a>
   </ul>
