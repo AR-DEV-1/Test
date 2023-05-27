@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = $_POST['message'];
 
     // Compose email message
-    $to = 'your-email@gmail.com';
+    $to = 'ar3755493@gmail.com';
     $subject = 'New Application';
     $body = "Name: $name\nEmail: $email\nMessage: $message";
 
