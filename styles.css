@@ -1,0 +1,123 @@
+/* styles.css */
+
+/* General styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+/* Hero styles */
+.hero {
+  height: 600px;
+  background-image: url("hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.hero-title {
+  font-size: 64px;
+  text-align: center;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f44336;
+  color: white;
+  font-size: 24px;
+
+/* Add a hover effect to the button */
+transition : transform .3s; 
+}
+
+.hero-button:hover {
+ transform : scale(1.1); 
+}
+
+/* Games styles */
+.games {
+ display : grid; 
+ grid-template-columns : repeat(3, minmax(0,1fr)); 
+ gap :20px; 
+ padding :20px; 
+}
+
+.game {
+ position : relative; 
+ overflow : hidden; 
+
+/* Add a transition to the game image */
+transition : transform .3s; 
+}
+
+.game-image {
+ width :100%; 
+ height :auto; 
+ object-fit : cover; 
+
+/* Add a hover effect to the game image */
+transform : scale(1); 
+}
+
+.game:hover .game-image {
+ transform : scale(1.1); 
+}
+
+.game-title {
+ position : absolute; 
+ bottom :0; 
+ left :0; 
+ right :0; 
+ padding :10px; 
+ background-color : rgba(0,0,0,0.5); 
+ color : white; 
+ font-size :24px; 
+}
