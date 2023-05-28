@@ -5,7 +5,7 @@ String[] splashes = {
     "Explore new worlds!",
     "Have fun!"
   "Made by Chat GPT and AR-DEV-1!",
-      "2d,2d,2d!",
+      "ar-dev-1.github.io/WarBound!",
   
       
 };
