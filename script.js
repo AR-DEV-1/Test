@@ -1,24 +1,28 @@
+// Array of text splash data
+var splashes = [
+  { heading: "Welcome to War Bound!", text: "Get ready to battle!" },
+  { heading: "Survive at all costs!", text: "Explore new worlds!" },
+  { heading: "Have fun!", text: "Made by Chat GPT and AR-DEV-1!" }
+  { heading: "Now on Github!", text: "ar-dev-1.github.io/WarBound!" }
+];
 
-function startGame() {
-  // Code to start your game
+// Get references to splash elements
+var splashHeading = document.getElementById("splash-heading");
+var splashText = document.getElementById("splash-text");
+
+// Function to change the text splash
+function changeSplash(index) {
+  var splash = splashes[index];
+  splashHeading.textContent = splash.heading;
+  splashText.textContent = splash.text;
 }
 
-function updateGame() {
-  // Code to update your game state
-}
+// Initial splash index
+var currentSplashIndex = 0;
 
-function drawGame() {
-  // Code to draw your game on the canvas
-}
-
-// Game loop
-function gameLoop() {
-  updateGame();
-  drawGame();
-
-  requestAnimationFrame(gameLoop);
-}
-
-// Run the game
-startGame();
-gameLoop();
+// Change splash every 5 seconds
+setInterval(function() {
+  changeSplash(currentSplashIndex);
+  currentSplashIndex = (currentSplashIndex + 1) % splashes.length;
+}, 3000);
+     
